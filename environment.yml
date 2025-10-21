@@ -1,5 +1,7 @@
 name: llmlearner
 channels:
+  - pytorch
+  - nvidia
   - conda-forge
   - defaults
 
@@ -14,10 +16,10 @@ dependencies:
   - tqdm
   - jupyterlab
   - ipywidgets
-  - pytorch
+  - pytorch=2.1
   - torchvision
   - torchaudio
-  - cudatoolkit=11.8  # only if your RunPod GPU supports CUDA (comment out if CPU only)
+  - pytorch-cuda=11.8  # GPU-enabled PyTorch build
   - sentencepiece
   - pip:
       - transformers
